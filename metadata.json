@@ -1,0 +1,6 @@
+{
+  "name": "PITWALL AI — MADRID MADRING EDITION",
+  "description": "Championship-critical race strategy war room & deterministic simulation engine for the Madrid MADRING circuit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

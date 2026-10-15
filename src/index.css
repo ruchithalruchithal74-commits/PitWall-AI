@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #101214;
+    color: #F2F0EA;
+    overflow-x: hidden;
+  }
+
+  /* Custom telemetry fonts */
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+  .font-display {
+    font-family: 'Chakra Petch', 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Custom telemetry scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #101214;
+}
+::-webkit-scrollbar-thumb {
+  background: #262A30;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B4048;
+}
+
+/* Telemetry pulse and grid animations */
+@keyframes scPulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 12px rgba(255, 68, 56, 0.7)); }
+  50% { opacity: 0.4; filter: drop-shadow(0 0 4px rgba(255, 68, 56, 0.3)); }
+}
+
+.animate-sc-pulse {
+  animation: scPulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes trackCarPulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-car-beacon {
+  animation: trackCarPulse 1.8s ease-in-out infinite;
+}
+
+/* Precision motorsport panel styles */
+.pitwall-panel {
+  background: #191C20;
+  border: 1px solid #262A30;
+}
+
+.pitwall-panel-hover:hover {
+  border-color: #383E48;
+}
+
+.pitwall-glow-green {
+  box-shadow: 0 0 20px -3px rgba(217, 243, 106, 0.25);
+}
+
+.pitwall-glow-red {
+  box-shadow: 0 0 20px -3px rgba(255, 68, 56, 0.3);
+}
